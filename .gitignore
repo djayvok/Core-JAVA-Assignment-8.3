@@ -1,0 +1,25 @@
+import java.io.*;
+
+public class File{
+	public static void main(String[] args)
+	{
+	    String fileInput  = "C://Users//a.txt";
+        String fileoutput = "C://Users//b.txt";
+        try {
+            FileReader fr=new FileReader(fileInput);
+            FileWriter fw=new FileWriter(fileoutput);
+
+            int c;
+            while((c=fr.read())!=-1) {
+                fw.write(c);
+            } 
+            fr.close();
+            fw.close();
+            System.out.println("Copied Successfully");
+        } 
+        catch(IOException e) {
+            System.out.println(e);
+        } 
+        
+	}
+}
